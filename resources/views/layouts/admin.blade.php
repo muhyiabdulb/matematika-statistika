@@ -124,6 +124,9 @@
                         <li class="nav-item dropdown">
                             <a href="{{ url('/admin/dashboard') }}"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a href="#"><i class="fas fa-document"></i><span>Materi</span></a>
+                        </li>
                 </aside>
             </div>
 
