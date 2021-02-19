@@ -2860,14 +2860,14 @@ body.layout-3 .main-footer {
         padding-left: 10px; }
 
 .main-content {
-  padding-left: 300px;
+  padding-left: 30px;
   padding-right: 30px;
   padding-top: 80px;
   width: 100%
   position: relative; }
 
 .main-footer {
-  padding: 20px 30px 20px 280px;
+  padding: 20px 30px 20px 460px;
   margin-top: 40px;
   color: #98a6ad;
   border-top: 1px solid #e3eaef;

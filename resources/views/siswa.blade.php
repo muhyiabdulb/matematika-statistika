@@ -1,9 +1,9 @@
-@extends('layouts.admin')
+@extends('layouts.siswa')
 @section('content')
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Dashboard</h1>
+            <h1>Home</h1>
         </div>
         <div class="section-body">
             <div class="row">
@@ -145,7 +145,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <a href="{{ url('/admin/statistika') }}">
+                    <a href="{{ url('/siswa/statistika') }}">
                         <div class="card card-statistic-1">
                             <div class="card-icon bg-danger">
                                 <i class="fas fa-chart-pie text-white" style="font-size: 2rem;"></i>

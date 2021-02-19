@@ -13,9 +13,11 @@
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
+        "laravel/helpers": "^1.4",
         "laravel/tinker": "^2.0",
         "laravel/ui": "2.4",
-        "realrashid/sweet-alert": "^3.2"
+        "realrashid/sweet-alert": "^3.2",
+        "unisharp/laravel-filemanager": "~1.8"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
