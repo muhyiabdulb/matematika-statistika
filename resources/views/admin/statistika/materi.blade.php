@@ -33,7 +33,7 @@
                               </div>
                               <div class="mb-3">
                                     <label style="color: black;" for="" class="form-label">Materi</label>
-                                    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+                                    <script src="{{ asset('js/tinymce/tinymce.min.js') }}" ></script>
                                     <textarea  name="sub_materi" class="form-control my-editor"></textarea>
                                     <script>
                                     var editor_config = {

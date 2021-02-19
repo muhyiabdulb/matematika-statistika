@@ -30,7 +30,7 @@
                               
                               <div class="mb-3">
                                     <label style="color: black;" for="" class="form-label">Soal</label>
-                                    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+                                    <script src="{{ asset('js/tinymce/tinymce.min.js') }}" ></script>
                                     <textarea  name="soal" class="form-control my-editor"></textarea>
                                     <script>
                                     var editor_config = {
