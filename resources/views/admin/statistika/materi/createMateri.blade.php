@@ -15,13 +15,13 @@
             </div>
             @endif
 
-            <a href="{{ url('/admin/statistika') }}" class="btn btn-primary">KEMBALI</a>
+            <a href="{{ route('admin.statistika.materi.index') }}" class="btn btn-primary">KEMBALI</a>
             <br>
             <br>
 
             <div class="section-header">
                   <div class="col-12">
-                        <form action="{{ route('materi.index') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('admin.statistika.materi.index') }}" method="post" enctype="multipart/form-data">
                               @csrf
                               <div class="mb-3">
                                     <label style="color: black;" for="kode_soal" class="form-label">Kode Materi</label>
@@ -77,35 +77,6 @@
                               </div>
                         </form>
                   </div>
-            </div>
-
-            <h3>Materi Statistika</h3>
-            <div class="section-header">
-                  <table width="100%">
-                        @foreach($materis as $materi)
-                              <tr>
-                                    <th height="21"><font color="#000000">&nbsp;</font></th>
-                                    <th>{{ $materi->materi }}</th>
-                              </tr>
-                              <tr>
-                                    <th height="21"><font color="#000000">&nbsp;</font></th>
-                                    <td>{!! $materi->sub_materi !!}</td>
-                              </tr>
-                              <tr>
-                                    <th height="21"><font color="#000000">&nbsp;</font></th>
-                                    <th>
-                                          <form action="{{ route('materi.delete', $materi->id) }}" method="post">
-                                                @csrf
-                                                @method('delete')
-                                                <button type="submit" class="btn btn-primary">Hapus</button>
-                                          </form>
-                                    </th>
-                                    <th>
-                                          <a href="{{ route('materi.edit', $materi->id) }}" class="btn btn-warning">Edit</a>
-                                    </th>
-                              </tr>
-                        @endforeach
-                  </table>
             </div>
     </section>
 </div>

@@ -23,9 +23,6 @@ class CreateTbSoalTable extends Migration
             $table->text('pilihan_d');
             $table->text('pilihan_e');
             $table->text('jawaban_benar');
-            $table->text('thumbnail1')->nullable();
-            $table->text('thumbnail2')->nullable();
-            $table->text('thumbnail3')->nullable();
             $table->timestamps();
         });
     }

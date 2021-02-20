@@ -11,7 +11,12 @@ class SoalController extends Controller
     public function index()
     {
         $soals = Soal::latest()->get();
-        return view('admin.statistika.soal', compact('soals'));
+        return view('admin.statistika.soal.soal', compact('soals'));
+    }
+
+    public function create()
+    {
+        return view('admin.statistika.soal.createSoal');
     }
 
     public function store(Request $request)
@@ -30,14 +35,14 @@ class SoalController extends Controller
         Soal::create($request->all());
 
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect()->route('soal.index')
+        return redirect()->route('admin.statistika.soal.index')
                         ->with('success','Soal Berhasil di buat.');
     }
 
     public function edit($id)
     {
         $soals = Soal::findOrFail($id);
-        return view('admin.statistika.editSoal', compact('soals'));
+        return view('admin.statistika.soal.editSoal', compact('soals'));
     }
 
     public function update(Request $request, $id)
@@ -65,7 +70,7 @@ class SoalController extends Controller
         $soals->save();
   
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect()->route('soal.index')
+        return redirect()->route('admin.statistika.soal.index')
                         ->with('success','Soal berhasil di perbarui');
     }
 
@@ -75,7 +80,7 @@ class SoalController extends Controller
         $data->delete();
         
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect()->route('soal.index')
+        return redirect()->route('admin.statistika.soal.index')
             ->with('success', 'Soal Berhasil Dihapus');
     }
 }

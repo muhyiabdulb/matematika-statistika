@@ -56,10 +56,10 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('profile.myprofile') }}">
+                                <a class="dropdown-item" href="{{ route('admin.profile.myprofile') }}">
                                     Akun Saya
                                 </a>
-                                <a class="dropdown-item" href="{{ route('profile.changepassword') }}">
+                                <a class="dropdown-item" href="{{ route('admin.profile.changepassword') }}">
                                     Ganti Password
                                 </a>
                                 <a class="dropdown-item" href="#" onclick="logout()">

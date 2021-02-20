@@ -12,8 +12,13 @@ class MateriController extends Controller
     {
         {
             $materis = Materi::latest()->get();
-            return view('admin.statistika.materi', compact('materis'));
+            return view('admin.statistika.materi.materi', compact('materis'));
         }
+    }
+
+    public function create()
+    {
+        return view('admin.statistika.materi.createMateri');
     }
 
     public function store(Request $request)
@@ -26,14 +31,14 @@ class MateriController extends Controller
   
         Materi::create($request->all());
    
-        return redirect()->route('materi.index')
+        return redirect()->route('admin.statistika.materi.index')
                         ->with('success','Materi Berhasil di buat.');
     }
 
     public function edit($id)
     {
         $materis = Materi::findOrFail($id);
-        return view('admin.statistika.editMateri', compact('materis'));
+        return view('admin.statistika.materi.editMateri', compact('materis'));
     }
 
     public function update(Request $request, $id)
@@ -51,7 +56,7 @@ class MateriController extends Controller
         $materis->save();
   
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect()->route('materi.index')
+        return redirect()->route('admin.statistika.materi.index')
                         ->with('success','Materi berhasil di perbarui');
     }
 
@@ -61,7 +66,7 @@ class MateriController extends Controller
         $data->delete();
         
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect()->route('materi.index')
+        return redirect()->route('admin.statistika.materi.index')
             ->with('success', 'Materi Berhasil Dihapus');
     }
 }

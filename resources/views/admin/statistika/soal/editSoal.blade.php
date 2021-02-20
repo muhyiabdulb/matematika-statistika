@@ -8,7 +8,7 @@
 
             <div class="section-header">
                   <div class="col-12">
-                        <form action="{{ route('soal.update', $soals->id) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('admin.statistika.soal.update', $soals->id) }}" method="post" enctype="multipart/form-data">
                               @csrf
                               @method('PUT')
                               <div class="mb-3">
@@ -18,7 +18,7 @@
                               
                               <div class="mb-3">
                                     <label style="color: black;" class="form-label">Soal</label>
-                                    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+                                    <script src="{{ asset('js/tinymce/tinymce.min.js') }}" ></script>
                                     <textarea  name="soal" class="form-control my-editor">{{ $soals->soal }}</textarea>
                                     <script>
                                           var editor_config = {

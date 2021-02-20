@@ -10,7 +10,7 @@
             <br>
             <div class="row">
                   <div class="col-lg-6 col-md-7 col-sm-7 col-15">
-                        <a href="{{ url('/admin/statistika/materi') }}">
+                        <a href="{{ route('admin.statistika.materi.index') }}">
                               <div class="card card-statistic-1">
                                     <div class="card-icon bg-success">
                                           <i class="fas fa-infinity text-white" style="font-size: 2rem;"></i>
@@ -24,7 +24,7 @@
                         </a>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6 col-15">
-                        <a href="{{ url('/admin/statistika/soal') }}">
+                        <a href="{{ route('admin.statistika.soal.index') }}">
                               <div class="card card-statistic-1">
                                     <div class="card-icon bg-info">
                                           <i class="fas fa-calculator text-white" style="font-size: 2rem;"></i>
